@@ -2,8 +2,6 @@
 
 let inputArr = process.argv
 let command = inputArr[2]
-let fs = require("fs")
-let path = require("path")
 let helpObj = require("./commands/help")
 let organizeObj = require("./commands/organize")
 let treeObj = require("./commands/tree")
