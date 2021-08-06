@@ -2,9 +2,11 @@
 
 let fs = require("fs")
 let path = require("path")
+let utility = require("../utility")
+let types = utility.types
+let codeTypes = utility.codeTypes
 
 function organizeFn(_path) {
-    // console.log("organize " + _path)
     if(_path == undefined || !(fs.existsSync(_path))) {
         _path = process.cwd()
     } 
@@ -12,7 +14,6 @@ function organizeFn(_path) {
     let desPath = path.join(_path, "organized_files")
     if(!fs.existsSync(desPath)) {
         fs.mkdirSync(desPath)
-        console.log(desPath)
     }
     organizeHelper(_path,desPath)
 }

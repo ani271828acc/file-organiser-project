@@ -1,3 +1,5 @@
+// help function
+
 function helpFn() {
     console.log(`
     fs_tools + tree                 : get filesystem tree of current folder
